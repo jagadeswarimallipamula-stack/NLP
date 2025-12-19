@@ -1,0 +1,25 @@
+import nltk
+from nltk.tokenize import word_tokenize, sent_tokenize
+# Download tokenizer models
+nltk.download('punkt')
+nltk.download('punkt_tab')
+# Sample multi-line paragraph
+text = """
+Artificial Intelligence is transforming healthcare. It helps doctors diagnose disease early.
+Moreover, AI enables personalized treatment for each patient.
+This shift can improve outcomes and reduce healthcare costs. Many hospitals now rely on AI￾powered systems.
+"""
+# === Word Tokenizer ===
+print("\n=== Word Tokenization ===")
+words = word_tokenize(text)
+print(words)
+# === Sentence Tokenizer ===
+print("\n=== Sentence Tokenization ===")
+sentences = sent_tokenize(text)
+for i, sent in enumerate(sentences, 1):
+    print(f"Sentence {i}: {sent}")
+# === Paragraph Tokenizer ===
+paragraphs = text.strip().split('\n\n')
+print("\n=== Paragraph Tokenization ===")
+for i, para in enumerate(paragraphs, 1):
+    print(f"Paragraph {i}: {para}")
