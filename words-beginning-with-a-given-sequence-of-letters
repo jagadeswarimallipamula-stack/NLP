@@ -1,0 +1,19 @@
+# Program to print all words beginning with a given sequence of letters
+
+# Sample text or list of words
+text = """Natural language processing is a fascinating area of
+artificial intelligence. It deals with how computers understand
+and generate human language."""
+
+# Convert text to a list of words
+words = text.split()
+
+# Ask user for the sequence of letters
+prefix = input("Enter the starting sequence: ").lower()
+
+# Print words beginning with the given prefix
+print(f"\nWords beginning with '{prefix}':")
+for word in words:
+    clean_word = word.strip('.,!;:').lower()
+    if clean_word.startswith(prefix):
+        print(clean_word)
