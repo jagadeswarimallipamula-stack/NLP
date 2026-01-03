@@ -1,0 +1,27 @@
+# Pre-Defined
+from nltk.util import ngrams
+# Example Sentence
+text = """Education empowers students to learn and education
+helps teachers to guide and education creates
+opportunities to learn and grow in education system around
+the world."""
+# Tokenize the text into words
+words = text.split()
+# Create n-grams and store them as lists so they can be reused
+unigrams = list(ngrams(words, 1))
+bigrams = list(ngrams(words, 2))
+trigrams = list(ngrams(words, 3))
+quadgrams = list(ngrams(words, 4))
+# Print all n-grams
+print("=== UNIGRAMS ===")
+for gram in unigrams:
+    print(gram)
+print("\n=== BIGRAMS ===")
+for gram in bigrams:
+    print(gram)
+print("\n=== TRIGRAMS ===")
+for gram in trigrams:
+    print(gram)
+print("\n=== 4-GRAMS ===")
+for gram in quadgrams:
+    print(gram)
